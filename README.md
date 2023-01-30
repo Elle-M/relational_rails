@@ -1,24 +1,25 @@
-# README
+[Turing School](https://turing.edu/) is an industry leading, online computer programming school, focused solely on helping students launch fulfilling careers in technology.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In week 1 of Mod 2 the first solo project assignment is a multiday solo project named named Relational Rails. Listed below are our specifications and outcomes of the project. 
 
-Things you may want to cover:
+## Learning Goals
 
-* Ruby version
+* Design a one-to-many relationship using a schema designer.
+* Write migrations to create tables with columns of varying data types and foreign keys.
+* Use Rails to create web pages that allow users to CRUD resources.
+* Create instance and class methods on a Rails model that use ActiveRecord methods and helpers.
+* Write model and feature tests that fully cover data logic and user behavior.
 
-* System dependencies
+## About
 
-* Configuration
+## Built With
 
-* Database creation
+Ruby v2.7.4 and Rails 5.2.8, RSpec 3.12 versions, PostgreSQL.
 
-* Database initialization
+## Testing
 
-* How to run the test suite
+A key goal of this project is to utilize Test Driven Development for models and features, and the SimpleCov gem to determine percentage of test coverage.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Author
 
-* Deployment instructions
-
-* ...
+[Elle Majors](https://github.com/Elle-M)
