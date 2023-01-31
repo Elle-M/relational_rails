@@ -1,0 +1,8 @@
+<form action="/salons" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a salon name and location:</p>
+  <input type='text' name='salon[name]'/><br/>
+  <%# <textarea name='salon[city]'></textarea><br/> %>
+  <input name='salon[city]'><br/>
+  <input type='submit'/>
+</form>
