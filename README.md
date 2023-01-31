@@ -22,7 +22,7 @@ A key goal of this project is to utilize Test Driven Development for models and 
 
 ## Schema
 
-
+<img width="357" alt="salon_schema" src="https://user-images.githubusercontent.com/113124260/215629154-8e66b3fa-6fdc-4aa2-8a1f-66546bfd9200.png">
 
 ## Author
 
