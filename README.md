@@ -20,6 +20,10 @@ Ruby v2.7.4 and Rails 5.2.8, RSpec 3.12 versions, PostgreSQL.
 
 A key goal of this project is to utilize Test Driven Development for models and features, and the SimpleCov gem to determine percentage of test coverage.
 
+## Schema
+
+
+
 ## Author
 
 [Elle Majors](https://github.com/Elle-M)
