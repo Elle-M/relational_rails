@@ -1,6 +1,6 @@
 [Turing School](https://turing.edu/) is an industry leading, online computer programming school, focused solely on helping students launch fulfilling careers in technology.
 
-In week 1 of Mod 2 the first solo project assignment is a multiday solo project named named Relational Rails. Listed below are our specifications and outcomes of the project. 
+In week 1 of Mod 2 the first solo project assignment is a multiday solo project named Relational Rails. Listed below are our specifications and outcomes of the project. 
 
 ## Learning Goals
 
