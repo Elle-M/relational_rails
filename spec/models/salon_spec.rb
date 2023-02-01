@@ -20,6 +20,12 @@ RSpec.describe Salon, type: :model do
 
         expect(salon.handlebars?).to be false
       end
+
+      it 'returns true when the name includes handlebars' do
+        salon = Salon.create!(name: 'handlebars barbershop', city: 'salida')
+
+        expect(salon.handlebars?).to be true
+      end
     end
   end
 end
