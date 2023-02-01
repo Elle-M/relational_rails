@@ -2,7 +2,7 @@
 
 class Salon < ApplicationRecord
   def handlebars?
-    if name == 'handlebars'
+    if name == 'handlebars' || name.include?('handlebars')
       return true
     elsif city == 'handlebars'
       return true
