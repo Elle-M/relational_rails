@@ -26,6 +26,12 @@ RSpec.describe Salon, type: :model do
 
         expect(salon.handlebars?).to be true
       end
+
+      it 'is case insensitive when checking if the description contains the word handlebars' do
+        salon = Salon.create!(name: 'Handlebars Barbershop', city: 'Salida')
+
+        expect(salon.handlebars?).to be true
+      end  
     end
   end
 end
