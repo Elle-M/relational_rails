@@ -5,7 +5,7 @@ class CreateWorkstation < ActiveRecord::Migration[5.2]
       t.integer :chair_count
       t.boolean :available
 
-      t.timestamp
+      t.timestamps
     end
   end
 end

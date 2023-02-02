@@ -6,7 +6,7 @@ class CreateSalon < ActiveRecord::Migration[5.2]
       t.integer :stars
       t.boolean :requires_insurance
 
-      t.timestamp
+      t.timestamps
     end
   end
 end
