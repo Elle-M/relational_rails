@@ -1,8 +1,10 @@
 <h1>All Salons</h1>
 
 <% @salons.each do |salon| %>
-  <h3><a href="/salons/<%= salon.id %>"><%= salon.name %></a></h3>
-  <h4><%= salon.city %></h4>
+  <h3>Salon Name:<a href="/salons/<%= salon.id %>"><%= salon.name %></a></h3>
+  <p>City:<%= salon.city %></p>
+  <p>Stars:<%= salon.stars %></p>
+  <p>Requires Insurance:<%= salon.requires_insurance %></p>
   <a href="/salons/<%= salon.id  %>/edit">Edit</a>
   <form action="/salons/<%= salon.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

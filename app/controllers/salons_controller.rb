@@ -11,7 +11,9 @@ class SalonsController < ApplicationController
   def create
     salon = Salon.new({
       name: params[:salon][:name],
-      city: params[:salon][:city]
+      city: params[:salon][:city],
+      stars: params[:salon][:stars],
+      requires_insurance: params[:salon][:requires_insurance]
       })
 
     salon.save
@@ -30,8 +32,10 @@ class SalonsController < ApplicationController
   def update
     salon = salon.find(params[:id])
     salon.update({
-      title: params[:salon][:name],
-      description: params[:salon][:city]
+      name: params[:salon][:name],
+      city: params[:salon][:city],
+      stars: params[:salon][:stars],
+      requires_insurance: params[:salon][:requires_insurance]
       })
     salon.save
     redirect_to "/salons/#{salon.id}"
