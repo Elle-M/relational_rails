@@ -20,12 +20,16 @@ ActiveRecord::Schema.define(version: 2023_02_02_215028) do
     t.string "city"
     t.integer "stars"
     t.boolean "requires_insurance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "workstations", force: :cascade do |t|
     t.string "name"
     t.integer "chair_count"
     t.boolean "available"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "salon_id"
     t.index ["salon_id"], name: "index_workstations_on_salon_id"
   end
