@@ -1,8 +1,10 @@
-# app/controllers/salons_controller.rb
-
 class SalonsController < ApplicationController
   def index
     @salons = Salon.all
+  end
+
+  def show
+    @salon = Salon.find(params[:id])
   end
 
   def new
@@ -11,16 +13,14 @@ class SalonsController < ApplicationController
   def create
     salon = Salon.new({
       name: params[:salon][:name],
-      city: params[:salon][:city]
+      city: params[:salon][:city],
+      stars: params[:salon][:stars],
+      requires_insurance: params[:salon][:requires_insurance]
       })
 
     salon.save
 
     redirect_to '/salons'
-  end
-
-  def show
-    @salon = Salon.find(params[:id])
   end
 
   def edit
@@ -30,8 +30,10 @@ class SalonsController < ApplicationController
   def update
     salon = salon.find(params[:id])
     salon.update({
-      title: params[:salon][:name],
-      description: params[:salon][:city]
+      name: params[:salon][:name],
+      city: params[:salon][:city],
+      stars: params[:salon][:stars],
+      requires_insurance: params[:salon][:requires_insurance]
       })
     salon.save
     redirect_to "/salons/#{salon.id}"
