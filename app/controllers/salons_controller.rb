@@ -1,8 +1,10 @@
-# app/controllers/salons_controller.rb
-
 class SalonsController < ApplicationController
   def index
     @salons = Salon.all
+  end
+
+  def show
+    @salon = Salon.find(params[:id])
   end
 
   def new
@@ -19,10 +21,6 @@ class SalonsController < ApplicationController
     salon.save
 
     redirect_to '/salons'
-  end
-
-  def show
-    @salon = Salon.find(params[:id])
   end
 
   def edit
