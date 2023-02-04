@@ -6,4 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-salon = Salon.create!(name: 'handlebars', city: 'salida')
+handlebars = Salon.create!(name: "Handlebars", city: "Salida", stars: 4, requires_insurance: true)
+elle = Salon.create!(name: "ELLE", city: "Denver", stars: 5, requires_insurance: true)
+major_cutz = Salon.create!(name: "Major Cutz", city: "LA", stars: 2, requires_insurance: false) 
+
+hour_workstation = salon.workstations.create!(name: 'hour_workstation', chair_count: 3, available: true )
+half_day_workstation = salon.workstations.create!(name: 'half_day_workstation', chair_count: 5, available: true )
+day_workstation = salon.workstations.create!(name: 'day_workstation', chair_count: 7, available: true )
