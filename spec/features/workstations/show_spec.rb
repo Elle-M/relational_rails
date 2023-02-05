@@ -18,6 +18,8 @@ RSpec.describe 'the workstations show page' do
     visit "/workstations/#{@hour_workstation.id}"
 
     expect(page).to have_content(@hour_workstation.chair_count)
+    expect(page).to have_content(@hour_workstation.available)
+    expect(page).to have_content(@half_day_workstation.chair_count)
     expect(page).to have_content(@half_day_workstation.available)
   end  
 end  
