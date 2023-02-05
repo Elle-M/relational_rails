@@ -1,0 +1,7 @@
+<h1>All Workstations</h1>
+
+<% @workstations.each do |workstation| %>
+  <p><%= workstation.name %></p>
+  <p><%= workstation.chair_count %></p>
+  <p><%= workstation.available %></p>
+<% end %>
