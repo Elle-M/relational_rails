@@ -6,6 +6,7 @@ class SalonsController < ApplicationController
   def show
     # require 'pry'; binding.pry
     @salon = Salon.find(params[:id])
+    @workstation_type_count = @salon.workstations.count
   end
 
   def new
