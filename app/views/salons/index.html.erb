@@ -5,6 +5,8 @@
   <p>City:<%= salon.city %></p>
   <p>Stars:<%= salon.stars %></p>
   <p>Requires Insurance:<%= salon.requires_insurance %></p>
+  <p>Created At:<%= salon.created_at %></p>
+  <p>Updated At:<%= salon.updated_at %></p>
   <a href="/salons/<%= salon.id  %>/edit">Edit</a>
   <form action="/salons/<%= salon.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
