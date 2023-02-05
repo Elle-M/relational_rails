@@ -1,3 +1,4 @@
+<a href="/salons">Salon Index</a>
 <a href="/workstations">Workstation Index</a>
 
 <form action="/salons/<%= @salon.id %>" method="post">
@@ -6,5 +7,7 @@
   <p>Edit</p>
   <input type='text' name='salon[name]' value="<%= @salon.name %>"/><br/>
   <textarea name='salon[city]'><%= @salon.city %></textarea><br/>
+  <textarea name='salon[stars]'><%= @salon.stars %></textarea><br/>
+  <textarea name='salon[requires_insurance]'><%= @salon.requires_insurance %></textarea><br/>
   <input type='submit'/>
 </form>
