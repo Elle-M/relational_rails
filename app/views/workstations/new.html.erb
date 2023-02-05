@@ -1,0 +1,8 @@
+<form action="/workstations/<%= @workstation.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit</p>
+  <input type='text' name='workstation[name]' value="<%= @workstation.name %>"/><br/>
+  <textarea name='workstation[chair_count]'><%= @workstation.chair_count %></textarea><br/>
+  <input type='submit'/>
+</form>
