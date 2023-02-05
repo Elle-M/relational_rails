@@ -1,6 +1,12 @@
+# User Story 5, Parent Children Index 
+
+# As a visitor
+# When I visit '/parents/:parent_id/child_table_name'
+# Then I see each Child that is associated with that Parent with each Child's attributes
+# (data from each column that is on the child table)
 require 'rails_helper'
 
-RSpec.describe 'the /workstations page' do
+RSpec.describe 'the salons/:salon_id/workstations page' do
   before :each do
     @elle = Salon.create!(name: 'ELLE', city: 'Denver', stars: 5, requires_insurance: true )
     @hour_workstation = @elle.workstations.create!(name: 'hour_workstation', chair_count: 3, available: true )
@@ -20,5 +26,4 @@ RSpec.describe 'the /workstations page' do
     expect(page).to have_content(@hour_workstation.chair_count)
     expect(page).to have_content(@half_day_workstation.available)
   end
-
 end
