@@ -11,6 +11,12 @@
 # When I visit the parent index,
 # I see that records are ordered by most recently created first
 # And next to each of the records I see when it was created
+
+# User Story 9, Parent Index Link
+
+# As a visitor
+# When I visit any page on the site
+# Then I see a link at the top of the page that takes me to the Parent Index
 require 'rails_helper'
 
 RSpec.describe 'the salons index page' do
@@ -39,5 +45,13 @@ RSpec.describe 'the salons index page' do
 
     expect(page).to have_content(@handlebars.created_at)
     expect(page).to have_content(@elle.created_at)
+  end
+
+  it 'displays a link at the top of any page that links to the salon index' do
+    visit "/salons"
+    visit "/"
+    visit "/workstations"
+    
+    expect(page).to have_content("Salon Index")
   end
 end
