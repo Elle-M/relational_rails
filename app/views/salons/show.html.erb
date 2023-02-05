@@ -2,8 +2,10 @@
 
 <a href="/salons">Salon Index</a>
 
-<h1>Salon Name:<%= @salon.name %></h1>
-
-<h2>City:<%= @salon.city %></h2>
+<h3>Salon Name:<%= @salon.name %></h3>
+  <p>ID:<%=@salon.id %></p>
+  <p>City:<%= @salon.city %></p>
+  <p>Stars:<%= @salon.stars %></p>
+  <p>Requires Insurance:<%= @salon.requires_insurance %></p>
 
 <p>Workstation:<%= @salon.workstations.name %></p>
