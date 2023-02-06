@@ -1,11 +1,12 @@
-# app/views/salons/show.html.erb
-
 <a href="/salons">Salon Index</a>
+<a href="/workstations">Workstation Index</a>
 
 <h3>Salon Name:<%= @salon.name %></h3>
   <p>ID:<%=@salon.id %></p>
   <p>City:<%= @salon.city %></p>
   <p>Stars:<%= @salon.stars %></p>
   <p>Requires Insurance:<%= @salon.requires_insurance %></p>
-
-<p>Workstation:<%= @salon.workstations.name %></p>
+  <p>Created At:<%= @salon.created_at %></p>
+  <p>Updated At:<%= @salon.updated_at %></p>
+  
+  <p>Workstations Type:<%= @workstation_type_count %></p>

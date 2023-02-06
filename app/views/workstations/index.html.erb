@@ -1,7 +1,10 @@
+<a href="/salons">Salon Index</a>
+<a href="/workstations">Workstation Index</a>
+
 <h1>All Workstations</h1>
 
 <% @workstations.each do |workstation| %>
-  <h3>workstation Name:<a href="/workstations/<%= workstation.id %>"><%= workstation.name %></a></h3>
+  <h3>Workstation Name:<a href="/workstations/<%= workstation.id %>"><%= workstation.name %></a></h3>
   <p>Chairs Offered:<%= workstation.chair_count %></p>
   <p>Available:<%= workstation.available %></p>
   <p>Salon ID:<%= workstation.salon_id %></p>

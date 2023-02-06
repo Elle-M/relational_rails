@@ -1,8 +1,17 @@
+<a href="/salons">Salon Index</a>
+<a href="/workstations">Workstation Index</a>
+
 <form action="/salons/<%= @salon.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
   <p>Edit</p>
   <input type='text' name='salon[name]' value="<%= @salon.name %>"/><br/>
+  <p>Salon Name</p>
   <textarea name='salon[city]'><%= @salon.city %></textarea><br/>
+  <p>City</p>
+  <textarea name='salon[stars]'><%= @salon.stars %></textarea><br/>
+  <p>Star Rating</p>
+  <textarea name='salon[requires_insurance]'><%= @salon.requires_insurance %></textarea><br/>
+  <p>Stylist Insurance Required</p>
   <input type='submit'/>
 </form>

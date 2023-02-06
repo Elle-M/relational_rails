@@ -1,10 +1,12 @@
 class SalonsController < ApplicationController
   def index
-    @salons = Salon.all
+    @salons = Salon.order(created_at: :desc)
   end
 
   def show
+    # require 'pry'; binding.pry
     @salon = Salon.find(params[:id])
+    @workstation_type_count = @salon.workstations.count
   end
 
   def new
@@ -15,7 +17,9 @@ class SalonsController < ApplicationController
       name: params[:salon][:name],
       city: params[:salon][:city],
       stars: params[:salon][:stars],
-      requires_insurance: params[:salon][:requires_insurance]
+      requires_insurance: params[:salon][:requires_insurance],
+      created_at: params[:salon][:created_at],
+      updated_at: params[:salon][:updated_at]
       })
 
     salon.save
