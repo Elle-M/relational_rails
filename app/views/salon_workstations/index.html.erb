@@ -4,7 +4,9 @@
 <h1>All Workstations</h1>
 
 <% @workstations.each do |workstation| %>
-  <p><%= workstation.name %></p>
-  <p><%= workstation.chair_count %></p>
-  <p><%= workstation.available %></p>
+  <p>Workstation Name:<%= workstation.name %></p>
+  <p>Chair Count:<%= workstation.chair_count %></p>
+  <p>Available:<%= workstation.available %></p>
+  <p>Created At:<%= workstation.created_at %></p>
+  <p>Updated At:<%= workstation.updated_at %></p>
 <% end %>
