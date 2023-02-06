@@ -48,4 +48,12 @@ RSpec.describe 'the salons index page' do
       expect(page).to have_link("Add Salon")
     end  
   end
+
+  describe 'User Story 1' do
+    it 'displays an add salon link' do
+      visit "/salons"
+
+      expect(page).to have_link("Update")
+    end  
+  end
 end
