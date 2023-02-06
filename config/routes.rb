@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   get '/salons', to: 'salons#index'
-  get '/salons/:id', to: 'salons#show'
   get '/salons/new', to: 'salons#new'
+  get '/salons/:id', to: 'salons#show'
   post '/salons', to: 'salons#create'
   get '/salons/:id/edit', to: 'salons#edit'
   patch '/salons/:id', to: 'salons#update'
