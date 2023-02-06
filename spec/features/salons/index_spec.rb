@@ -54,4 +54,11 @@ RSpec.describe 'the salons index page' do
     
     expect(page).to have_content("Salon Index")
   end
+
+  it 'displays an add salon link' do
+    # salon = Salon.create!(name: 'ELLE', city: 'Denver', stars: 5, requires_insurance: true )
+    visit "/salons"
+
+    expect(page).to have_link("Add Salon")
+  end
 end
