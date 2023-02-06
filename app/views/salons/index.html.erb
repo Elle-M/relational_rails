@@ -1,8 +1,9 @@
 <a href="/salons">Salon Index</a>
 <a href="/workstations">Workstation Index</a>
-<a href="salons/id/workstations">#{salon.id} Index</a>
+<a href="salons/salon_id/workstations">#{salon.id} Index</a>
 
 <h1>All Salons</h1>
+<h3><a href="salons/new">Add Salon</a></h3>
 
 <% @salons.each do |salon| %>
   <h3>Salon Name:<a href="/salons/<%= salon.id %>"><%= salon.name %></a></h3>
@@ -11,7 +12,7 @@
   <p>Requires Insurance:<%= salon.requires_insurance %></p>
   <p>Created At:<%= salon.created_at %></p>
   <p>Updated At:<%= salon.updated_at %></p>
-  <a href="/salons/<%= salon.id  %>/edit">Edit</a>
+  <a href="/salons/<%= salon.id  %>/edit">Update</a>
   <form action="/salons/<%= salon.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
