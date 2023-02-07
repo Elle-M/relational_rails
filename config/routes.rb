@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   delete '/workstations/:id', to: 'workstations#destroy'
 
   get '/salons/:salon_id/workstations', to: 'salon_workstations#index'
+  get '/salons/workstations', to: 'salon_workstations#index'
+  get '/salons/:id/workstation/new', to: 'workstations#new'
 end

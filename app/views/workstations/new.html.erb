@@ -1,11 +1,14 @@
 <a href="/salons">Salon Index</a>
 <a href="/workstations">Workstation Index</a>
 
-<form action="/workstations/<%= @workstation.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Add Workstation</p>
-  <input type='text' name='workstation[name]' value="<%= @workstation.name %>"/><br/>
-  <textarea name='workstation[chair_count]'><%= @workstation.chair_count %></textarea><br/>
-  <input type='submit'/>
-</form>
+<%= form_with url: '/salon/:id/workstations/new', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br/>
+  <%= form.label :chair_count %>
+  <%= form.text_field :chair_count %><br/>
+  <%= form.label :available %>
+  <%= form.check_box :available %>
+
+  <%= form.submit "Add Workstation" %>
+<% end %>
+
