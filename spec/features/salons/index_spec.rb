@@ -46,6 +46,10 @@ RSpec.describe 'the salons index page' do
       visit "/salons"
 
       expect(page).to have_link("Add Salon")
+
+      click_link "Add Salon"
+
+      expect(current_path).to eq('/salons/new')
     end  
   end
 
@@ -53,7 +57,7 @@ RSpec.describe 'the salons index page' do
     it 'displays an add salon link' do
       visit "/salons"
 
-      expect(page).to have_link("Update")
+      expect(page).to have_link("Update Salon")
     end  
   end
 end
