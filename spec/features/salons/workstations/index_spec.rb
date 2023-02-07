@@ -25,10 +25,25 @@ RSpec.describe 'the salons/:salon_id/workstations page' do
     end
   end  
 
-describe 'User Story 11' do 
-  xit 'displays a link at the top of any page that links to the salon index' do
-    visit "/salons/#{@elle.id}"
-    # save_and_open_page
-    expect(page).to have_content("#{@elle.name} Workstations")
+  describe 'User Story 11' do 
+    xit 'displays a link at the top of any page that links to the salon index' do
+      visit "/salons/#{@elle.id}"
+      # save_and_open_page
+      #not sure on best way to create link?
+      expect(page).to have_content("#{@elle.name} Workstations")
+    end
   end
+
+  describe 'User Story 13' do 
+    it 'displays a link to add a new adoptable workstation for salon "Create Workstation"' do
+      visit "/salons/workstations"
+      # save_and_open_page
+
+      expect(page).to have_link("Add Workstation")
+
+      # click_link "Add Workstation"
+
+      # expect(current_path).to eq('/salons/#{@elle.id}/workstation/new')
+    end  
+  end  
 end
