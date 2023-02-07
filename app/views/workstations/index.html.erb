@@ -8,7 +8,7 @@
   <p>Chairs Offered:<%= workstation.chair_count %></p>
   <p>Available:<%= workstation.available %></p>
   <p>Salon ID:<%= workstation.salon_id %></p>
-  <a href="/workstations/<%= workstation.id  %>/edit">Edit</a>
+  <a href="/workstations/<%= workstation.id  %>/edit">Update Workstation</a>
   <form action="/workstations/<%= workstation.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
