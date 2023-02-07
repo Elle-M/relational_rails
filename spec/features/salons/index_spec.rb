@@ -54,10 +54,24 @@ RSpec.describe 'the salons index page' do
   end
 
   describe 'User Story 12' do
-    it 'displays an add salon link' do
+    it 'displays an update salon link' do
       visit "/salons"
 
       expect(page).to have_link("Update Salon")
     end  
   end
+
+  describe 'User Story 17' do
+    it 'displays an edit salon link' do
+      visit "/salons"
+
+      expect(page).to have_link("Edit Salon")
+
+      click_link "Edit Salon"
+      # how do you speciy which salon edit button
+
+      expect(current_path).to eq('/salons/#{@elle.id}/edit')
+    end  
+  end
+
 end
