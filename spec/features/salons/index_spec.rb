@@ -22,7 +22,7 @@ RSpec.describe 'the salons index page' do
     end 
   end
 
-  describe 'User Story 9' do
+  describe 'User Story 6' do
     it 'display records lists when it was created' do
       visit "/salons"
 
@@ -49,7 +49,7 @@ RSpec.describe 'the salons index page' do
     end  
   end
 
-  describe 'User Story 1' do
+  describe 'User Story 12' do
     it 'displays an add salon link' do
       visit "/salons"
 
