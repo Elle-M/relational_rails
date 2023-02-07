@@ -25,5 +25,13 @@ RSpec.describe 'the workstations index page' do
       
       expect(page).to have_content("Workstation Index")
     end  
-  end 
+  end
+
+  describe 'User Story 15' do 
+    it 'displays workstations where the boolean column is `true`' do
+      visit "/workstations"
+      
+      expect(Workstation.available?).to eq([@hour_workstation, @half_day_workstation])
+    end
+  end    
 end  
