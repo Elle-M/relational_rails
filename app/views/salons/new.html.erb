@@ -4,14 +4,15 @@
 <form action="/salons" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>Enter a salon name and location:</p>
+  <p>Name:</p>
   <input type='text' name='salon[name]'/><br/>
   <%# <textarea name='salon[city]'></textarea><br/> %>
+  <p>City:</p>
   <input name='salon[city]'><br/>
-  <input type='submit'/>
   <p>Do you require the stylist to carry their own insurance?</p>
-  <input type="checkbox" checked="true" />
-  <input type="checkbox" checked="false" />
+  <p>True<input type="checkbox" checked="true" /></p>
+  <p>False<input type="checkbox" checked="false" /></p>
   <p>Rating by Star Count:</p>
   <input type="number" name="salon[chair_count]" /><br/>
-   <input type='submit'/>
+  <input type='submit'/>
 </form>
