@@ -36,7 +36,7 @@ RSpec.describe 'the salons/:salon_id/workstations page' do
 
   describe 'User Story 13' do 
     it 'displays a link to add a new adoptable workstation for salon "Create Workstation"' do
-      visit "/salons/workstations"
+      visit "/salons/#{@elle.id}/workstations"
       # save_and_open_page
 
       expect(page).to have_link("Add Workstation")
